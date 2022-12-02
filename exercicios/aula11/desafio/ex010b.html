@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <link rel="shortcut icon" href="icone/icone-globo.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo Nacionalidades</h1>
+    <input type="text" name="pais" id="ipais" placeholder="informe seu país">
+    <input type="button" value="Verificar" onclick="checar()">
+    <div id="res"></div>
+
+    <script>
+        function checar() {
+            var nome = document.getElementById('ipais')
+            var pais = nome.value.toUpperCase()
+            var res = document.getElementById('res')
+
+            res.innerHTML = `<p>O país informado foi: <strong>${pais}</strong></p>`
+            if (pais == 'BRASIL') {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é Estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
