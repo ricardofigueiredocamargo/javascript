@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <main>
+        <p>
+            <label for="iano">Ano de Nascimento: </label>
+            <input type="number" name="ano" id="iano" required max="4">
+        </p>
+        <p>
+            Sexo:
+            <input type="radio" name="sexo" id="imasc" checked value="M">
+            <label for="imasc">Masculino</label>
+            <input type="radio" name="sexo" id="ifem" value="F">
+            <label for="ifem">Feminino</label>
+        </p>
+        <p><input type="button" value="Verificar" onclick="calcular()"></p>
+        <p id="paragrafo">Preencha os dados acima para ver o resultado!</p>
+        <div id="imagem"></div>
+    </main>
+    <footer>
+        <p>&#169 CursoemVídeo</p>
+    </footer>
+
+    <script>
+        function calcular() {
+            var agora = new Date()
+            var anoAtual = parseInt(agora.getFullYear())
+            var anoNasc = parseInt(document.getElementById('iano').value)
+            var idade = anoAtual - anoNasc
+
+            var main = document.querySelector('main')
+            var sexo = document.querySelector('input[name="sexo"]:checked').value
+            var paragrafo = document.getElementById('paragrafo')
+            var imagem = document.getElementById('imagem')
+
+            // Para o gênero masculino
+            if (sexo == 'M' && idade > 100 || idade < 0) {
+                window.alert('[ERRO] Verifique seus dados e tente novamente')
+            } else if (sexo == 'M' && idade <= 2) {
+                paragrafo.innerHTML = `Detectamos um bebê de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/bebe-foto2.jpg" alt="bebê">`
+                main.style.height = '430px'
+            } else if (sexo == 'M' && idade <= 12) {
+                paragrafo.innerHTML = `Detectamos uma criança de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/menino-foto2.jpg" alt="menino">`
+                main.style.height = '430px'
+            } else if (sexo == 'M' && idade < 18) {
+                paragrafo.innerHTML = `Detectamos um adolescente de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/adolescente-m-foto2.jpg" alt="adolescente">`
+                main.style.height = '430px'
+            } else if (sexo == 'M' && idade < 60) {
+                paragrafo.innerHTML = `Detectamos um homem de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/homem-foto2.jpg" alt="homem">`
+                main.style.height = '430px'
+            } else if (sexo == 'M' && idade <= 100) {
+                paragrafo.innerHTML = `Detectamos um idoso de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/idoso-foto2.jpg" alt="idoso">`
+                main.style.height = '430px'
+            } 
+
+            // Para o gênero feminino
+            if (sexo == 'F' && idade > 100 || idade < 0) {
+                window.alert('[ERRO] Verifique seus dados e tente novamente')
+            } else if (sexo == 'F' && idade <= 2) {
+                paragrafo.innerHTML = `Detectamos um bebê de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/bebe-foto2.jpg" alt="bebê">`
+                main.style.height = '430px'
+            } else if (sexo == 'F' && idade <= 12) {
+                paragrafo.innerHTML = `Detectamos uma criança de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/menina-foto2.jpg" alt="menina">`
+                main.style.height = '430px'
+            } else if (sexo == 'F' && idade < 18) {
+                paragrafo.innerHTML = `Detectamos uma adolescente de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/adolescente-f-foto2.jpg" alt="adolescente">`
+                main.style.height = '430px'
+            } else if (sexo == 'F' && idade < 60) {
+                paragrafo.innerHTML = `Detectamos uma mulher de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/mulher-foto2.jpg" alt="mulher">`
+                main.style.height = '430px'
+            } else if (sexo == 'F' && idade <= 100) {
+                paragrafo.innerHTML = `Detectamos uma idosa de ${idade} anos`
+                paragrafo.style.textAlign = 'center'
+                imagem.innerHTML = `<img src="imagens/idosa-foto2.jpg" alt="idosa">`
+                main.style.height = '430px'
+            } 
+        }            
+    </script>
+</body>
+</html>
