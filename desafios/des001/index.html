@@ -19,25 +19,6 @@
     <footer>
         <p>&#169 CursoemVídeo</p>
     </footer>
-
-    <script>
-        var corpo = document.body
-        var agora = new Date()
-        var hora = agora.getHours()
-        var tempo = document.getElementById('tempo')
-        var imagem = document.getElementById('imagem')
-
-        tempo.innerHTML = `Agora são ${hora} horas.`
-        if (hora < 12) {
-            imagem.innerHTML = `<img src="imagens/manha-foto3.jpg" alt="tarde">`
-            corpo.style.background = '#CEBD90'
-        } else if (hora <= 18) {
-            imagem.innerHTML = `<img src="imagens/tarde-foto2.jpg" alt="tarde">`
-            corpo.style.background = '#A47762'
-        } else {
-            imagem.innerHTML = `<img src="imagens/noite-foto2.jpg" alt="tarde">`
-            corpo.style.background = '#474849'
-        } 
-    </script>
+    <script src="script/script.js"></script>
 </body>
 </html>
