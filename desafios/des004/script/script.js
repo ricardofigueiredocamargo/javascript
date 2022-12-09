@@ -10,6 +10,7 @@ function calcular() {
 
         for (var c = 1; c <= 10; c++) {
             var resultado = n * c
+            tabuada.value = `tab${c}`
             tabuada.innerHTML += `<option>${n} x ${c} = ${resultado}</option>`
         }
     }
