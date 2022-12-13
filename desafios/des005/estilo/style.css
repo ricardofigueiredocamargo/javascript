@@ -45,6 +45,10 @@ input[type=button]:hover {
     transition: 0.3s;
 }
 
+select#ilista {
+    width: 150px;
+}
+
 div#analise p {
     padding-top: 10px;
     padding-bottom: 0px;
