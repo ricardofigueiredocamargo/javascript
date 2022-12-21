@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, section, div {
+    padding: 10px;
+}
+
+input[type=button] {
+    font-weight: bold;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: grey;
+    color: white;
+    transition: 0.3s;
+}
+
+div#resultado > h2, p {
+    padding-bottom: 10px;
+}
