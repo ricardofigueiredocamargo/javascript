@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, section, div {
+    padding: 10px;
+}
+
+input[type=button] {
+    padding: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: grey;
+    color: white;
+    transition: 0.3s;
+}
+
+h2, p {
+    padding-bottom: 10px;
+}
+
+strong#marca {
+    padding: 3px;
+}
